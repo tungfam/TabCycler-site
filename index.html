@@ -7,6 +7,7 @@
   <title>Tab Cycler — Cmd+Tab, for your tabs</title>
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="browser-demo.css">
 </head>
 <body>
   <header class="site-header wrap">
@@ -25,17 +26,36 @@
     </section>
     <section class="demo-section wrap" aria-labelledby="demo-title">
       <div class="section-caption"><h2 id="demo-title">Your recent tabs. Right where you left them.</h2><span>Interactive preview · Sample tabs</span></div>
-      <div class="cycler-preview">
+      <div class="browser-demo" role="group" aria-label="Example Chrome window with Tab Cycler over a sample webpage">
+        <div class="browser-tabstrip" aria-hidden="true">
+          <div class="window-controls"><i></i><i></i><i></i></div>
+          <div class="browser-tabs">
+            <div class="browser-tab active"><img src="assets/brands/notion.svg" alt="">Project notes <span>×</span></div>
+            <div class="browser-tab"><img src="assets/brands/figma.png" alt="">Design explorations <span>×</span></div>
+            <div class="browser-tab"><img src="assets/brands/gmail.png" alt="">Inbox <span>×</span></div>
+            <span class="new-tab">+</span>
+          </div>
+        </div>
+        <div class="browser-toolbar" aria-hidden="true"><span class="browser-nav">← &nbsp; → &nbsp; ↻</span><div class="address-bar"><span>▧</span> notion.so/project-notes</div><span>⋮</span></div>
+        <div class="browser-page">
+          <div class="sample-document" aria-hidden="true">
+            <aside class="document-sidebar"><div class="workspace"><img src="assets/brands/notion.svg" alt="">Workspace</div><p>⌕ &nbsp; Search</p><p>⌂ &nbsp; Home</p><p class="document-active">▤ &nbsp; Project notes</p><p>▱ &nbsp; Reading list</p><p>◷ &nbsp; This week</p></aside>
+            <div class="document-content"><p class="breadcrumbs">Workspace &nbsp; / &nbsp; Project notes</p><div class="document-heading">▤</div><h3>Project notes</h3><p class="document-intro">A little space for the next big idea.</p><div class="document-rule"></div><h4>Ready for the next launch</h4><p>Keep the important things close. Everything else can wait.</p><div class="document-task">☑ &nbsp; Explore the first design</div><div class="document-task">☐ &nbsp; Gather feedback</div><div class="document-task">☐ &nbsp; Make something worth sharing</div></div>
+          </div>
+          <div class="page-dimmer" aria-hidden="true"></div>
+          <div class="cycler-preview">
         <p class="preview-brand">Tab Cycler</p>
         <div class="tab-row" aria-label="Sample recent tabs">
-          <button class="tab-card" type="button" aria-pressed="false" data-title="Project notes" data-domain="notion.so"><span class="site-icon">N</span><span>Project notes</span></button>
-          <button class="tab-card" type="button" aria-pressed="true" data-title="Design explorations" data-domain="figma.com"><span class="site-icon violet">F</span><span>Design explorations</span></button>
-          <button class="tab-card" type="button" aria-pressed="false" data-title="Inbox" data-domain="mail.google.com"><span class="site-icon rose">M</span><span>Inbox</span></button>
-          <button class="tab-card" type="button" aria-pressed="false" data-title="Pull requests" data-domain="github.com"><span class="site-icon">G</span><span>Pull requests</span></button>
-          <button class="tab-card" type="button" aria-pressed="false" data-title="Reading list" data-domain="example.com"><span class="site-icon mint">R</span><span>Reading list</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Project notes" data-domain="notion.so"><span class="site-icon brand-tile"><img src="assets/brands/notion.svg" alt="" width="30" height="30"></span><span>Project notes</span></button>
+          <button class="tab-card" type="button" aria-pressed="true" data-title="Design explorations" data-domain="figma.com"><span class="site-icon brand-tile"><img src="assets/brands/figma.png" alt="" width="30" height="30"></span><span>Design explorations</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Inbox" data-domain="mail.google.com"><span class="site-icon brand-tile"><img src="assets/brands/gmail.png" alt="" width="32" height="32"></span><span>Inbox</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Pull requests" data-domain="github.com"><span class="site-icon brand-tile github-tile"><img src="assets/brands/github.svg" alt="" width="30" height="30"></span><span>Pull requests</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Reading list" data-domain="example.com"><span class="site-icon mint"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1m0-14c3-2 6-2 9-1v14c-3-1-6-1-9 1V6Z"/></svg></span><span>Reading list</span></button>
         </div>
         <div class="selected-tab" aria-live="polite"><h3 id="selected-title">Design explorations</h3><p id="selected-domain">figma.com</p></div>
         <div class="preview-footer"><span><kbd>←</kbd> <kbd>→</kbd> Browse · Shortcut again → Next</span><span>Release ⌘ to switch</span></div>
+          </div>
+        </div>
       </div>
       <p class="preview-note">Click a sample card to change the highlight. This preview stays on this page.</p>
     </section>
