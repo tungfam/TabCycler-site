@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Switch between recently used tabs, just like Cmd+Tab switches between apps on macOS.">
+  <title>Tab Cycler — Cmd+Tab, for your tabs</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="./"><img src="assets/logo.png" width="34" height="34" alt="">Tab Cycler</a>
+    <nav aria-label="Main navigation"><a href="#how">How it works</a><a href="privacy/">Privacy</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div>
+        <p class="eyebrow">GOOGLE CHROME · MACOS</p>
+        <h1>Cmd+Tab.<br><span>For your tabs.</span></h1>
+        <p class="lead">Switch between recently used tabs, just like Cmd+Tab switches between apps on macOS.</p>
+        <div class="hero-actions"><a class="button" href="#how">See how it works <span aria-hidden="true">↘</span></a><span class="availability">Coming to the Chrome Web Store</span></div>
+      </div>
+      <img class="hero-logo" src="assets/logo.png" alt="A blue glass browser tab with a lightning bolt" width="360" height="360">
+    </section>
+    <section class="demo-section wrap" aria-labelledby="demo-title">
+      <div class="section-caption"><h2 id="demo-title">Your recent tabs. Right where you left them.</h2><span>Interactive preview · Sample tabs</span></div>
+      <div class="cycler-preview">
+        <p class="preview-brand">Tab Cycler</p>
+        <div class="tab-row" aria-label="Sample recent tabs">
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Project notes" data-domain="notion.so"><span class="site-icon">N</span><span>Project notes</span></button>
+          <button class="tab-card" type="button" aria-pressed="true" data-title="Design explorations" data-domain="figma.com"><span class="site-icon violet">F</span><span>Design explorations</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Inbox" data-domain="mail.google.com"><span class="site-icon rose">M</span><span>Inbox</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Pull requests" data-domain="github.com"><span class="site-icon">G</span><span>Pull requests</span></button>
+          <button class="tab-card" type="button" aria-pressed="false" data-title="Reading list" data-domain="example.com"><span class="site-icon mint">R</span><span>Reading list</span></button>
+        </div>
+        <div class="selected-tab" aria-live="polite"><h3 id="selected-title">Design explorations</h3><p id="selected-domain">figma.com</p></div>
+        <div class="preview-footer"><span><kbd>←</kbd> <kbd>→</kbd> Browse · Shortcut again → Next</span><span>Release ⌘ to switch</span></div>
+      </div>
+      <p class="preview-note">Click a sample card to change the highlight. This preview stays on this page.</p>
+    </section>
+    <section class="how wrap" id="how" aria-labelledby="how-title">
+      <p class="eyebrow">LESS SEARCHING. MORE DOING.</p>
+      <h2 id="how-title">One shortcut. Back in the flow.</h2>
+      <ol class="steps">
+        <li><span class="step-number">01</span><h3>Press your shortcut</h3><p>Start with <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>Y</kbd>. Prefer another combination? Change it in Chrome’s extension shortcut settings.</p></li>
+        <li><span class="step-number">02</span><h3>Hold to browse</h3><p>Keep Command held for 200 ms to see up to eight recent tabs. Use Left/Right or press your shortcut again to move the highlight.</p></li>
+        <li><span class="step-number">03</span><h3>Release to switch</h3><p>Release Command to activate the highlighted tab. Just want the previous tab? A quick tap switches without showing the cycler.</p></li>
+      </ol>
+    </section>
+    <section class="privacy-summary wrap">
+      <p class="eyebrow">A SMALL TOOL. A SMALL FOOTPRINT.</p>
+      <h2>Your recent-tab order stays in Chrome.</h2>
+      <p>No backend, accounts, analytics, or advertising. Tab information is processed locally, with recent-tab IDs kept in Chrome’s temporary session storage.</p>
+      <a class="text-link" href="privacy/">Read the privacy policy <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="notes wrap">
+      <h2>A couple of things to know</h2>
+      <p>Made for Chrome on macOS. Windows and Linux support are planned. Start the shortcut while a normal webpage has focus: Chrome’s address bar, internal pages, Chrome Web Store, and some embedded frames have keyboard or extension restrictions. Enter is available as a selection fallback.</p>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>Tab Cycler · Tung Fam</span><div><a href="privacy/">Privacy</a><a href="privacy/#contact">Contact</a></div></footer>
+  <script src="preview.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tab Cycler uses tab information locally in Chrome, and why it requests its permissions.">
+  <title>Privacy — Tab Cycler</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png"><link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header wrap"><a class="brand" href="../"><img src="../assets/logo.png" width="34" height="34" alt="">Tab Cycler</a><nav aria-label="Main navigation"><a href="../">Home</a><a href="#contact">Contact</a></nav></header>
+  <main class="legal wrap">
+    <p class="eyebrow">PRIVACY, IN PLAIN LANGUAGE</p><h1>Your tabs stay your business.</h1>
+    <p class="intro">Tab Cycler has no backend, analytics, or advertising. It uses tab information locally in Chrome to help you switch between recently used tabs.</p>
+    <p class="updated">Last updated: 7 November 2026 · Developer: Tung Fam</p>
+    <h2>What the extension uses</h2>
+    <p>Tab Cycler accesses open-tab identifiers, titles, URLs, favicon addresses, window information, and tab activation events. It uses this information to order tabs by recent use and display their titles, domains, and icons. The cycler shows up to eight recent tabs in the current window.</p>
+    <p>Keyboard listeners handle navigation and modifier release for the cycler. The extension does not record text you type into webpages, read passwords, extract page contents, or take screenshots.</p>
+    <h2>What is stored, and for how long</h2>
+    <p>Recent-tab identifiers, their ordering, and temporary switching-session details are kept in Chrome’s session storage. Tab titles, URLs, and favicon addresses are used in memory for the cycler, rather than saved as a persistent browsing-history database.</p>
+    <p>Session storage survives suspension of the extension’s background worker. Chrome clears it when the browser restarts or the extension is disabled, reloaded, or updated. Closed tabs are removed from the recent-tab ordering. You can also remove the extension through Chrome’s extension settings.</p>
+    <h2>Why the permissions are needed</h2>
+    <ul>
+      <li><strong>Tabs:</strong> read tab titles, URLs, and favicon addresses to identify the tabs shown in the cycler.</li>
+      <li><strong>Storage:</strong> maintain recent-tab ordering and temporary switching sessions locally.</li>
+      <li><strong>Scripting:</strong> initialize already-open webpages on installation or update, and recover missing initialization without refreshing the page.</li>
+      <li><strong>HTTP and HTTPS website access:</strong> display the cycler over webpages and receive the keyboard events needed for navigation and Command-release selection.</li>
+    </ul>
+    <p>Chrome’s permission wording describes what these permissions allow. Tab Cycler uses them for its tab-switching functionality. Chrome restricts extensions on certain pages, and you can control website access through Chrome’s extension settings.</p>
+    <h2>Network requests and third parties</h2>
+    <p>We do not operate a backend that receives your tab history or tab contents. We do not sell browsing data or use it for advertising or analytics.</p>
+    <p>To display favicons, Chrome may load icon images from the website or icon address associated with a tab. Those image requests go to the relevant site or icon host, which may receive ordinary network-request information such as your IP address. The extension sets no-referrer on these images and does not upload your recent-tab list with them.</p>
+    <h2>This website</h2>
+    <p>This website is hosted on GitHub Pages. It does not add advertising, analytics, tracking scripts, contact forms, or account registration. GitHub Pages records visitors’ IP addresses for security purposes, as explained in <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub’s documentation</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Following an external link is subject to that service’s policies.</p>
+    <h2>Limited use</h2>
+    <p>Tab Cycler uses browsing-related information only to provide its tab-switching feature, consistent with the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including its Limited Use requirements.</p>
+    <h2>Changes to this policy</h2>
+    <p>We will update this page and its date when the extension’s data handling changes. This policy describes the current extension; future features are not covered by permissions requested in advance.</p>
+    <h2 id="contact">Contact</h2>
+    <p>For support or questions about this policy, email Tung Fam at <a href="mailto:tungfam8@gmail.com">tungfam8@gmail.com</a>.</p>
+  </main>
+  <footer class="site-footer wrap"><span>Tab Cycler · Tung Fam</span><div><a href="../">Home</a><a href="#contact">Contact</a></div></footer>
+</body>
+</html>
