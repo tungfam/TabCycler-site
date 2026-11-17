@@ -11,10 +11,11 @@
   <main class="legal wrap">
     <p class="eyebrow">PRIVACY, IN PLAIN LANGUAGE</p><h1>Your tabs stay your business.</h1>
     <p class="intro">Tab Cycler has no backend, analytics, or advertising. It uses tab information locally in Chrome to help you switch between recently used tabs.</p>
-    <p class="updated">Last updated: 16 November 2026 · Developer: Tung Fam</p>
+    <p class="updated">Last updated: 18 November 2026 · Developer: Tung Fam</p>
     <h2>What the extension uses</h2>
     <p>Tab Cycler accesses open-tab identifiers, titles, URLs, favicon addresses, window information, and tab activation events. It uses this information to order tabs by recent use and display their titles, domains, and icons. The cycler shows up to eight recent tabs in the current window.</p>
     <p>Keyboard listeners handle navigation and modifier release for the cycler. The extension does not record text you type into webpages, read passwords, extract page contents, or take screenshots.</p>
+    <p>Optional diagnostics keep up to 64 recent events per webpage in memory, such as modifier-key state, focus changes, switching status, and errors. The report excludes typed text, page contents, titles, and URLs. You can view and copy a report from the extension’s Options page to share for support. Nothing is sent automatically; this history resets when the document or extension reloads.</p>
     <h2>What is stored, and for how long</h2>
     <p>Recent-tab identifiers, their ordering, temporary switching-session details, and a small favicon cache are kept in Chrome’s session storage. The cache holds up to 64 small icons, keyed by their page URL and favicon address, for up to 30 minutes of reuse. Tab titles are used in memory. We do not maintain a persistent browsing-history database.</p>
     <p>Session storage survives suspension of the extension’s background worker. Chrome clears it when the browser restarts or the extension is disabled, reloaded, or updated. Closed tabs are removed from the recent-tab ordering. You can also remove the extension through Chrome’s extension settings.</p>
